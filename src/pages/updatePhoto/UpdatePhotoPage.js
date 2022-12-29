@@ -1,16 +1,16 @@
 import React, {useState} from "react";
-import {postData} from "../../util/fetch";
 
-const AddNewPhotoPage = () => {
-    const url = 'http://localhost:8080/photo';
-
+const UpdatePhotoPage = () => {
     const[photoName, setPhotoName] = useState([]);
     const[photoMadeBy, setPhotoMadeBy]=useState([]);
 
-    //for posting data to backend
-    const addNewPhoto = async (photoName, photoMadeBy) => {
-        await postData(url, photoName);
-    }
+    //for handling the input changes
+    const handlePhotoMadeByUpdate = (person) => {
+        setPhotoMadeBy(person);
+    };
+    const handlePhotoNameUpdate = (name) => {
+        setPhotoName(name);
+    };
 
     return (
         <form className="add-photo-form">
@@ -22,9 +22,8 @@ const AddNewPhotoPage = () => {
             <input id="photo-made-by" placeholder={photoMadeBy}
                    onChange={(e) => handlePhotoMadeByUpdate(e.target.value)} />
 
-            <button onClick={() => addNewPhoto}>Fénykép hozzáadása</button>
         </form>
     )
-}
+};
 
-export default AddNewPhotoPage;
+export default UpdatePhotoPage;

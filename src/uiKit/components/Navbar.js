@@ -1,12 +1,13 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 const Navbar = () => {
 
     return (
         <>
             <div className="navbar-container">
-                <p>Új kép hozzáadása</p>
+                <Link to="/">Kezdőoldal</Link>
+                <Link to="/photo/add_new">Új kép hozzáadása</Link>
                 <p>További műveletek</p>
             </div>
 
