@@ -28,6 +28,24 @@ public class PhotoController {
         photoService.addPhoto(photo);
     }
 
+    @PutMapping("/{id}")
+    public void updatePhoto(@PathVariable("id") int id, @RequestBody Photo photo) {
+        Photo oldPhoto = photoService.findPhotoById(id);
+
+        if (photo.getName() == null) {
+            photo.setName(oldPhoto.getName());
+        }
+        if (photo.getMadeBy() == null) {
+            photo.setMadeBy(oldPhoto.getMadeBy());
+        }
+        if (photo.getViewCounter() == null) {
+            photo.setViewCounter(oldPhoto.getViewCounter());
+        }
+        photo.setId(oldPhoto.getId());
+
+        photoService.addPhoto(photo);
+    }
+
     @DeleteMapping("/{id}")
     public void deletePhoto(@PathVariable("id") int id) {
         photoService.deletePhoto(id);

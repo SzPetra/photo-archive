@@ -28,4 +28,9 @@ public class PhotoService {
     public void deletePhoto(int id) {
         photoRepository.deleteById(id);
     }
+
+    public Photo findPhotoById(int id) {
+        return photoRepository.findById(id)
+                .orElse(null);
+    }
 }
