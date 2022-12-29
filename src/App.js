@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useEffect, useState} from "react";
 
 function App() {
+
+  const url = 'http://localhost:8080/photo';
+  const[photos, setPhotos]=useState([]);
+
+  useEffect(() => fetchData, []);
+  const fetchData = () => {
+    fetch(url).then((response) => {
+      return response.json();
+    }).then((data) => {
+      setPhotos(data);
+    })
+        .catch((error) => {
+        });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {photos.map((photo) => photo.name)}
     </div>
   );
 }
