@@ -10,19 +10,17 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Photo {
+public class ViewCounter {
 
     @JsonIgnore
     @Id
-    @GeneratedValue
-    @Column(name = "id")
+    @Column(name = "photo_id")
     private int id;
 
-    private String name;
+    private int viewCount = 0;
 
-    private String madeBy;
-
-    @OneToOne(mappedBy = "photo", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    private ViewCounter viewCounter;
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "photo_id")
+    private Photo photo;
 }
