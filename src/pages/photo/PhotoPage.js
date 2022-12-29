@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {getData} from "../util/fetch";
+import {getData} from "../../util/fetch";
 
 const PhotoPage = () => {
     const url = 'http://localhost:8080/photo';
@@ -10,7 +10,7 @@ const PhotoPage = () => {
         setPhotos(data);
     }
 
-    useEffect(() => fetchPhotos, []);
+    useEffect(() => fetchPhotos, [photos]);
 
     return (
         <table>
