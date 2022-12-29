@@ -10,6 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "viewcounters")
 public class ViewCounter {
 
     @JsonIgnore
