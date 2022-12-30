@@ -14,16 +14,17 @@ const PhotoPage = () => {
 
     return (
         <table>
-            <tr>
+            <thead><tr>
                 <th>Fénykép címe</th>
                 <th>Készítette</th>
                 <th>Megtekintések</th>
-            </tr>
-            <tr>
+            </tr></thead>
+
+            <tbody><tr>
                 <td>{photos.map((photo) => photo.name)}</td>
                 <td>{photos.map((photo) => photo.madeBy)}</td>
                 <td>{photos.map((photo) => photo.viewCounter)}</td>
-            </tr>
+            </tr></tbody>
         </table>
     )
 }

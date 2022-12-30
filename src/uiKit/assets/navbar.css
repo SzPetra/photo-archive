@@ -1,0 +1,21 @@
+.navbar-container {
+    background-color: var(--navbar-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    color: var(--navbar-text-color);
+    font-size: 1.5em;
+}
+
+/* for navbar links */
+.navbar-link {
+    text-decoration: none;
+}
+.navbar-link:visited {
+    color: var(--navbar-text-color);
+}
+.navbar-link:hover {
+    color: var(--main-black);
+}

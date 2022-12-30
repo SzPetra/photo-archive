@@ -9,10 +9,10 @@ export const getData = async (url) => {
     return await response.json();
 }
 
-export async function postData(url='', data={}) {
+export async function postData(url='', data={}){
     return await fetch(url, {
         headers: {
-            "Content-Type": "application/json; charset=UTF-8"
+            "Content-type": "application/json; charset=UTF-8"
         },
         method: 'POST',
         body: JSON.stringify(data)
