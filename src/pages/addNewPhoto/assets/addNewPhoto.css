@@ -1,0 +1,23 @@
+.add-photo-form {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 20%;
+    margin-left: 40%;
+    margin-top: 10%;
+
+    color: var(--navbar-bg-color);
+    font-size: 1em;
+}
+#add-photo-form-button {
+    background-color: var(--navbar-bg-color);
+    border: 0.2em solid var(--page-bg-color);
+    color: var(--page-bg-color);
+
+    margin-top: 3%;
+
+    font-size: 0.7em;
+}
+#add-photo-form-button:hover {
+    background-color: var(--main-black);
+}
