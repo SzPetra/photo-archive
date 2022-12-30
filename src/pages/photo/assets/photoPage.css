@@ -1,0 +1,24 @@
+body {
+    background-color: var(--page-bg-color);
+    font-size: 1.5em;
+
+    color: var(--navbar-bg-color);
+}
+.photo-table {
+    border: none;
+    max-width: 90%;
+    margin-left: 5%;
+
+    text-align: left;
+    padding: 1em;
+}
+.photo-table-header {
+    background-color: var(--navbar-bg-color);
+    color: var(--page-bg-color);
+}
+.tbody.tr:nth-child(odd) {
+    background-color: var(--page-bg-color);
+}
+.tbody.tr:nth-child(even) {
+    background-color: var(--navbar-bg-color);
+}

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {getData} from "../../util/fetch";
+import "./assets/photoPage.css";
 
 const PhotoPage = () => {
     const url = 'http://localhost:8080/photo';
@@ -13,17 +14,17 @@ const PhotoPage = () => {
     useEffect(() => fetchPhotos, [photos]);
 
     return (
-        <table>
-            <thead><tr>
+        <table className="photo-table">
+            <thead className="photo-table-header"><tr>
                 <th>Fénykép címe</th>
                 <th>Készítette</th>
                 <th>Megtekintések</th>
             </tr></thead>
 
-            <tbody><tr>
-                <td>{photos.map((photo) => photo.name)}</td>
-                <td>{photos.map((photo) => photo.madeBy)}</td>
-                <td>{photos.map((photo) => photo.viewCounter)}</td>
+            <tbody className="photo-table-body"><tr>
+                <td className="photo-table-body-element">{photos.map((photo) => photo.name)}</td>
+                <td className="photo-table-body-element">{photos.map((photo) => photo.madeBy)}</td>
+                <td className="photo-table-body-element">{photos.map((photo) => photo.viewCounter)}</td>
             </tr></tbody>
         </table>
     )

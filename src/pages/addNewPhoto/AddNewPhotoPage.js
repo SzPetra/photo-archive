@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {postData} from "../../util/fetch";
+import "./assets/addNewPhoto.css";
 
 const AddNewPhotoPage = () => {
     const url = 'http://localhost:8080/photo';

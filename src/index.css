@@ -13,8 +13,8 @@ code {
 }
 
 :root {
-  --navbar-color: #274546;
-  --navbar-text-color: #EFEEE5;
+  --navbar-bg-color: #274546;
+  --page-bg-color: #EFEEE5;
 
   --main-black: black;
 }
